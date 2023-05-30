@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="container">
+        <div class="backfiller">
+            <div class="inputBox">
+                <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+                <form class="form-container" enctype='multipart/form-data'>
+                    <div class="upload-files-container">
+                        <div class="drag-file-area">
+                            <span class="material-icons-outlined upload-icon"> file_upload </span>
+                            <h3 class="dynamic-message"> Drag & drop any file here </h3>
+                            <label class="label">or<span class="browse-files"> <input type="file" multiple class="default-file-input"/> <span class="browse-files-text">browse file</span> <span>from device</span> </span> </label>
+                        </div>
+                        <div class="file-block">
+                            <div class="file-info"> <span class="material-icons-outlined file-icon">description</span> <span class="file-name"> </span> | <span class="file-size">  </span> </div>
+                            <span class="material-icons remove-file-icon">delete</span>
+                        </div>
+                        <button type="button" class="upload-button"> Confirm </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="map"></div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/georaster"></script>
+    <script src="https://unpkg.com/proj4"></script>
+    <script src="https://unpkg.com/georaster-layer-for-leaflet"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

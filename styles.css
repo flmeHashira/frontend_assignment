@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+    font-family: "Poppins", sans-serif;
+}
+
+
+#container {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#map {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    opacity: 0.5px;
+    top: 0;
+
+}
+.leaflet-pane {
+    z-index: 1;
+}
+
+.backfiller {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 3;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    height: 70vh;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    margin-top: 20vh;
+    z-index: 5;
+    border-radius: 2rem;
+    box-shadow: rgb(0, 0, 255, 0.6) 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27, 0.8) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19, 0.8) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85, 0.8) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 122, 122, 0.8) 40px -40px;
+}
+
+
+.form-container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+   	justify-content: center;
+	align-items: center;
+}
+.upload-files-container {
+	width: 420px;
+	padding: 30px 60px;
+	border-radius: 40px;
+	display: flex;
+   	align-items: center;
+   	justify-content: center;
+	flex-direction: column;
+}
+
+/* outline dashed */
+.drag-file-area {
+	border: 2px dashed rgba(255, 122, 122, 1);
+	border-radius: 40px;
+	margin: 10px 0 15px;
+	padding: 30px 50px;
+	width: 350px;
+	max-width: 35vw;
+	text-align: center;
+}
+.drag-file-area .upload-icon {
+	font-size: 50px;
+}
+.drag-file-area h3 {
+	font-size: 26px;
+	margin: 15px 0;
+}
+.drag-file-area label {
+	font-size: 19px;
+}
+.drag-file-area label .browse-files-text {
+	color: rgba(255, 122, 122, 1);
+	font-weight: bolder;
+	cursor: pointer;
+}
+.browse-files span {
+	position: relative;
+	top: -27px;
+}
+.default-file-input {
+	opacity: 0;
+}
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.file-block {
+	color: #f7fff7;
+	background-color: rgba(255, 122, 122, 1);
+  	transition: all 1s;
+	width: 390px;
+	position: relative;
+	display: none;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 10px 0 15px;
+	padding: 10px 20px;
+	border-radius: 25px;
+	cursor: pointer;
+}
+.file-info {
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+}
+.file-icon {
+	margin-right: 10px;
+}
+.file-name, .file-size {
+	padding: 0 3px;
+}
+.remove-file-icon {
+	cursor: pointer;
+}
+
+.upload-button {
+	background-color:rgba(255, 122, 122, 1);
+	color: #f7fff7;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	border: none;
+	border-radius: 20px;
+	margin: 10px;
+	padding: 7.5px 50px;
+	cursor: pointer;
+}
